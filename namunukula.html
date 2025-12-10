@@ -4,12 +4,235 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home - Brand</title>
+    <title>Namunukula - Brand</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:700&display=swap">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/bss-overrides.css">
+    <style>
+        .blog-content {
+            background: linear-gradient(to bottom, #000000, #1a1a1a);
+            color: #ffffff;
+            padding: 60px 0;
+        }
+
+        .blog-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .quick-info-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .quick-info-box h3 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .info-item {
+            background: rgba(255,255,255,0.15);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .info-item strong {
+            display: block;
+            color: #64ffda;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+        }
+
+        .info-item span {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .blog-content h2 {
+            color: #64ffda;
+            font-size: 2rem;
+            margin: 50px 0 25px;
+            font-weight: 700;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .blog-content h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 80%;
+            background: linear-gradient(180deg, #667eea, #764ba2);
+            border-radius: 3px;
+        }
+
+        .blog-content h3 {
+            color: #8892b0;
+            font-size: 1.4rem;
+            margin: 30px 0 15px;
+        }
+
+        .blog-content p {
+            color: #ccd6f6;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .highlight-box {
+            background: linear-gradient(90deg, rgba(100,255,218,0.1), transparent);
+            border-left: 4px solid #64ffda;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+            font-style: italic;
+            color: #64ffda;
+        }
+
+        .image-section {
+            margin: 40px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+
+        .image-section img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            min-height: 400px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            position: relative;
+        }
+
+        .image-placeholder::before {
+            content: '📷';
+            font-size: 4rem;
+            opacity: 0.3;
+            position: absolute;
+        }
+
+        .tips-section {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 40px;
+            border-radius: 15px;
+            margin: 50px 0;
+            box-shadow: 0 10px 40px rgba(240, 147, 251, 0.3);
+        }
+
+        .tips-section h3 {
+            color: white;
+            margin-top: 0;
+            margin-bottom: 25px;
+        }
+
+        .tips-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .tips-section li {
+            padding: 12px 0;
+            padding-left: 35px;
+            position: relative;
+            color: white;
+            line-height: 1.6;
+        }
+
+        .tips-section li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .quote-box {
+            border-left: 5px solid #64ffda;
+            padding: 25px 25px 25px 30px;
+            margin: 40px 0;
+            background: rgba(100, 255, 218, 0.05);
+            border-radius: 0 10px 10px 0;
+            font-style: italic;
+            color: #8892b0;
+            font-size: 1.3rem;
+        }
+
+        .section-divider {
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            margin: 50px auto;
+            border-radius: 3px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            margin-top: 50px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.5);
+            color: white;
+        }
+
+        .story-intro {
+            font-size: 1.2rem;
+            color: #64ffda;
+            text-align: center;
+            margin: 30px 0;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .blog-content h2 {
+                font-size: 1.6rem;
+            }
+            
+            .image-placeholder {
+                min-height: 250px;
+            }
+
+            .tips-section {
+                padding: 25px;
+            }
+        }
+    </style>
 </head>
 
 <body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="77">
@@ -25,32 +248,222 @@
             </div>
         </div>
     </nav>
-    <header class="mb-0 mb-sm-0 pb-sm-9 masthead" style="padding-top: 86px;margin-bottom: 37px;padding-bottom: 92px;padding-right: 0px;background: url(&quot;assets/img/IMG_7687.jpg&quot;) center / cover no-repeat;">
+    
+    <header class="mb-0 mb-sm-0 pb-sm-9 masthead" style="padding-top: 86px;margin-bottom: 37px;padding-bottom: 92px;padding-right: 0px;background: url('assets/img/IMG_7687.jpg') center / cover no-repeat;">
         <div class="intro-body">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
                         <h1 class="brand-heading">Namunukula</h1>
-                        <p class="intro-text">Conquering Namunukula: Sri Lanka's Hidden Nine Peaks</p><a class="btn btn-link btn-circle" role="button" href="#about"><i class="fa fa-angle-double-down"></i></a>
+                        <p class="intro-text">Conquering Namunukula: Sri Lanka's Hidden Nine Peaks</p>
+                        <a class="btn btn-link btn-circle" role="button" href="#story"><i class="fa fa-angle-double-down"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-    <section class="text-center content-section" id="about" style="margin-top: -49px;margin-bottom: -83px;padding-top: 103px;">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <h2>About Traveloge</h2>
+
+    <section class="blog-content" id="story">
+        <div class="blog-container">
+            
+            <p class="story-intro">🏔️ A 22-year-old's adventure into another world</p>
+
+            <div class="quick-info-box">
+                <h3>⚡ Quick Facts</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <strong>HEIGHT</strong>
+                        <span>2,036m</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>DIFFICULTY</strong>
+                        <span>Challenging</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>DURATION</strong>
+                        <span>7-9 hours</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>BEST TIME</strong>
+                        <span>Mar-Sep</span>
+                    </div>
                 </div>
             </div>
+
+            <h2>How It Started: The Worst Wake-Up Fail Ever</h2>
+            
+            <p>So here's how you definitely shouldn't start a mountain adventure: by sleeping through your alarm and missing the 8 AM bus.</p>
+
+            <p>My friend threw out the idea one random evening—"Yo, let's climb Namunukula this weekend." Eight of us from uni agreed immediately. The plan was solid: meet in Badulla at 8 AM, catch the bus together, conquer the Nine Peaks as a squad.</p>
+
+            <p>Plot twist: Two of us (yeah, including me) totally overslept. We rolled up at 11 AM to six very unimpressed friends. The roasting started immediately and honestly never stopped the entire trip. But hey, sometimes the best adventures start with the worst planning, right?</p>
+
+            <div class="image-section">
+                <div class="image-placeholder">
+                    [Your group photo at the starting point - Replace with actual image]
+                </div>
+            </div>
+
+            <h2>Level 1: Walking Among Giants</h2>
+
+            <p>The first part of the climb? Absolutely magical. We walked through this insane forest of towering eucalyptus and pine trees that felt like something out of a fantasy movie. These weren't regular trees—they were MASSIVE. Like, you had to crane your neck all the way back to see the tops.</p>
+
+            <p>The forest floor was this thick carpet of leaves and pine needles that made everything feel soft and quiet. I kept stopping to take photos looking straight up at the canopy. This section is pretty chill, perfect for warming up and getting into the zone.</p>
+
+            <div class="highlight-box">
+                "I've hiked a bunch of places in Sri Lanka, but I'd never seen trees like this. It was like walking through a cathedral made of nature."
+            </div>
+
+            <div class="image-section">
+                <div class="image-placeholder">
+                    [Towering eucalyptus forest - looking up through the canopy]
+                </div>
+            </div>
+
+            <h2>Level 2: Welcome to the Rainforest Boss Level</h2>
+
+            <p>Then everything changed. Like, EVERYTHING.</p>
+
+            <p>We crossed into what I can only describe as a mountain rainforest on steroids. The tall, straight trees? Gone. Now it was dense, twisted, moss-covered chaos. And it started raining. Not heavy, just this constant mist that came from everywhere.</p>
+
+            <p>This is where Namunukula stops being nice. The trail gets steep—like really steep. Everything's slippery. There are bamboo groves, muddy paths, roots trying to trip you, and random plants that look like they could be from Jurassic Park.</p>
+
+            <p>We were soaked, muddy, laughing at how ridiculous we looked, and absolutely loving it. This is the section that separates the Instagram hikers from the real ones.</p>
+
+            <h2>Wait... Are We Still in Sri Lanka?</h2>
+
+            <p>When we finally broke through to the summit, I literally stopped and said out loud: "This can't be Sri Lanka."</p>
+
+            <p>I'm not exaggerating. The landscape completely changes. White crystalline rocks scattered everywhere like someone dropped them from space. Low, hardy vegetation. And everywhere—I mean EVERYWHERE—these vibrant orange and green lichens coating every surface like nature went crazy with a spray paint can.</p>
+
+            <p>Standing there at 2,036 meters, I genuinely felt like I'd been teleported to some high-altitude plateau in Nepal or something. This is what makes Namunukula insane—it's not just a hard hike. It's literally a portal to a different ecosystem that shouldn't exist in Sri Lanka but does.</p>
+
+            <div class="image-section">
+                <div class="image-placeholder">
+                    [Summit landscape - white rocks and colorful lichens]
+                </div>
+            </div>
+
+            <h2>The Rhododendron Forest (Yes, Really)</h2>
+
+            <p>And then we found them: wild rhododendrons. In Sri Lanka. Blooming red flowers so vibrant they looked photoshopped.</p>
+
+            <p>Locals call them "Ratmal" (රත්මල්), and they're not your garden-variety rhododendrons. These are wild, growing at altitude, thriving in the constant mist. They were blazing red against all the grays and greens, like nature's way of showing off.</p>
+
+            <p>The whole summit area was covered in these flowers and the craziest lichens I've ever seen. Orange, yellow, green—painting every branch and rock. It was psychedelic and beautiful and completely unexpected.</p>
+
+            <div class="image-section">
+                <div class="image-placeholder">
+                    [Close-up of vibrant red rhododendron bloom]
+                </div>
+            </div>
+
+            <div class="section-divider"></div>
+
+            <h2>Ancient Shrines in the Sky</h2>
+
+            <p>As we explored the peaks, we found small shrines with Buddha statues, Vishnu, and Ganesha statues just chilling at the summit. These weren't new—they were weathered, ancient-looking, clearly important to the local villagers.</p>
+
+            <p>We learned that people from nearby villages actually climb up here for full moon poya days to meditate and make offerings. Standing there as the sun started setting, with the statues silhouetted against the golden light and mountains stretching forever, I totally understood why. The place just feels sacred.</p>
+
+            <div class="image-section">
+                <div class="image-placeholder">
+                    [Buddha statue at sunset with mountain backdrop]
+                </div>
+            </div>
+
+            <h2>That Night We Thought We Messed Up</h2>
+
+            <p>We decided to camp at the summit because why just visit when you can live there, right? Set up tents, clouds rolling in from all directions, epic sunset views, the whole squad vibing together.</p>
+
+            <p>Then around midnight, things got serious. One of our friends started having what looked like a medical episode—possibly altitude sickness, possibly panic attack, definitely scary. We were hours from any hospital, in the dark, above 2,000 meters.</p>
+
+            <p>The whole vibe changed instantly. Jokes stopped. We divided responsibilities—some stayed with him keeping him warm and calm, others checked our supplies and phone signals. It was probably only 30 minutes but felt like hours.</p>
+
+            <p>He stabilized eventually, and by morning after some rest he was much better. But that moment taught us something important: mountains are beautiful but they don't care about your Instagram captions. Always go with people you trust, always be prepared, always respect the mountain.</p>
+
+            <div class="highlight-box">
+                Real talk: That scary moment brought us closer as friends than any of the fun parts did. Sometimes the hard moments are the ones that matter most.
+            </div>
+
+            <h2>The Ancient Well Photo</h2>
+
+            <p>One of the coolest discoveries: ancient wells built by villagers to collect rainwater. Perfect circular openings in the rock, lined with carefully placed stones.</p>
+
+            <p>We found one with a perfect circular opening and had an idea. Put the camera at the bottom, all eight of us gather around the rim looking down. The result? One of the sickest photos from the whole trip. It looks like we're peering into another dimension, our faces creating this perfect circle around the opening.</p>
+
+            <div class="image-section">
+                <div class="image-placeholder">
+                    [Creative group photo through the ancient well - 8 friends looking down]
+                </div>
+            </div>
+
+            <h2>Sunset Views That Break Your Brain</h2>
+
+            <p>The views from up there are unreal. Layers upon layers of mountain ranges stretching to infinity. Each ridge a different shade of blue-gray. When the clouds cleared, we could see the whole Uva Province below us, tea plantations creating geometric patterns, towns twinkling as lights came on.</p>
+
+            <p>We spent the evening just sitting there, sharing food, telling stories, watching the sky turn from gold to pink to deep purple. The altitude, the isolation, the sheer uniqueness of where we were—it was one of those perfect moments you know you'll remember when you're old.</p>
+
+            <div class="image-section">
+                <div class="image-placeholder">
+                    [Sunset view over layered mountain ranges]
+                </div>
+            </div>
+
+            <div class="section-divider"></div>
+
+            <div class="tips-section">
+                <h3>🎒 Real Student-Budget Tips</h3>
+                <ul>
+                    <li><strong>Getting There:</strong> Base in Badulla, hire a vehicle to 3rd Mile Post on Passara-Badulla Road. Split the cost between your group—way cheaper.</li>
+                    <li><strong>Anti-Leech Socks:</strong> BUY THEM. Seriously. They work 100x better than spray. Don't be cheap on this.</li>
+                    <li><strong>Waterproof Everything:</strong> Rain jacket, pack cover, phone protection. It WILL rain.</li>
+                    <li><strong>Camping Gear:</strong> If you're camping, bring warm layers. It gets cold at night even in summer.</li>
+                    <li><strong>Water:</strong> Bring at least 3 liters per person. You'll thank me.</li>
+                    <li><strong>First Aid:</strong> Include altitude sickness meds just in case. Better safe than sorry.</li>
+                    <li><strong>Start Early:</strong> Learn from our mistake. 8 AM start = enough daylight for everything.</li>
+                    <li><strong>Group Size:</strong> 4-8 people is perfect. Don't go solo—it's not safe.</li>
+                    <li><strong>Fitness Level:</strong> You need moderate fitness. The second section is genuinely challenging.</li>
+                </ul>
+            </div>
+
+            <h2>Would I Do It Again?</h2>
+
+            <p>In a heartbeat. But I'd wake up on time.</p>
+
+            <p>Namunukula isn't Sigiriya with its crowds and clear paths. It's not Ella Rock with its Instagram fame. This is raw, challenging, unpredictable, and absolutely worth every slippery step.</p>
+
+            <p>The rain, the mud, the altitude challenges, even the scary midnight moment—all of it made the experience real. Because the best adventures aren't about everything going perfectly. They're about facing challenges with friends, pushing your limits, and discovering places so beautiful they don't seem real.</p>
+
+            <div class="quote-box">
+                "We missed the bus, got soaked, slipped in mud, had a health scare, and it was still one of the best weekends of my life. That's how you know it was worth it."
+            </div>
+
+            <div class="highlight-box">
+                <strong>Final Student Wisdom:</strong> If you're thinking about it, stop thinking and just plan it. Get a group of good friends together. Actually set multiple alarms. And go discover your own version of the Nine Peaks. Just remember: bring those anti-leech socks. Trust me on this one.
+            </div>
+
+            <div class="section-divider"></div>
+
+            <p style="text-align: center; color: #64ffda; font-size: 1.2rem; margin: 40px 0;">
+                📸 All photos by Sethum Dinusha<br>
+                📍 Namunukula, Sri Lanka<br>
+                🏔️ December 2024
+            </p>
+
+            <div style="text-align: center;">
+                <a href="index.html" class="back-btn">← Back to All Adventures</a>
+            </div>
+
         </div>
     </section>
-    <footer>
+
+    <footer style="background: #000;">
         <div class="container text-center">
-            <p>Copyright ©&nbsp;Brand 2025</p>
+            <p style="color: #fff;">Copyright © Brand 2025</p>
         </div>
     </footer>
+    
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/grayscale.js"></script>
 </body>
